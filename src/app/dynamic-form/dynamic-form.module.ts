@@ -2,19 +2,24 @@ import { NgModule } from '@angular/core';
 import FieldsContainerComponent from './container/fields-container.component';
 import TextComponent from './inputs/text';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import DynamicFormComponent from './dynamic-form.component';
+
 @NgModule({
     declarations: [
         FieldsContainerComponent,
         TextComponent,
+        DynamicFormComponent
     ],
     imports: [
         CommonModule,
-        FormsModule
+        FormsModule,
+        ReactiveFormsModule
     ],
     exports: [
         FieldsContainerComponent,
-        TextComponent
+        TextComponent,
+        DynamicFormComponent
     ]
   })
   export class DynamicFormModule { }

@@ -5,6 +5,6 @@ export default class Field {
     id: string;
     label: string;
     type: FieldType;
-    validation: FieldValidation;
-    value: any;
+    validation?: FieldValidation;
+    value?: any;
 }

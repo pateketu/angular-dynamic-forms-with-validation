@@ -1,6 +1,8 @@
-<div *ngFor="let field of fields">
+<div *ngFor="let field of fields">    
     <label>{{field.label}}</label>
-    <span [ngSwitch]="field.type">
+    <!-- <div [ngSwitch]="field.type">
         <form-text [field]="field" *ngSwitchCase="'text'"></form-text>
-    </span>
+    </div>  -->
+    
+        <div dynamicField [field]="field"></div>
 </div>

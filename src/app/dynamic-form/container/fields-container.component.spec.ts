@@ -4,17 +4,29 @@ import { CommonModule } from '@angular/common';
 import { DynamicFormModule } from '../dynamic-form.module';
 import Field from '..//model/field';
 import { FieldType } from '../model/fieldType';
+import { DynamicForm } from '../model/dynamicForm';
+import { FormGroup } from '@angular/forms';
 
 describe('Fields Container', () => {
     let fixture: ComponentFixture<FieldsContainerComponent>;
     let sut: any;
+
+    const mockDynamicForm = {
+        formGroup: new FormGroup({})
+    };
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
           imports: [
             CommonModule,
             DynamicFormModule
-          ]
+          ],
+          providers: [
+                        {
+                            provide: DynamicForm,
+                            useValue: mockDynamicForm
+                        }
+                    ],
         }).compileComponents();
         fixture = TestBed.createComponent(FieldsContainerComponent);
         sut = fixture.componentInstance;

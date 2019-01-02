@@ -4,12 +4,14 @@ import TextComponent from './inputs/text';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import DynamicFormComponent from './dynamic-form.component';
+import { DynamicFieldDirective } from './container/dynamic-field.directive';
 
 @NgModule({
     declarations: [
         FieldsContainerComponent,
         TextComponent,
-        DynamicFormComponent
+        DynamicFormComponent,
+        DynamicFieldDirective
     ],
     imports: [
         CommonModule,
@@ -20,6 +22,9 @@ import DynamicFormComponent from './dynamic-form.component';
         FieldsContainerComponent,
         TextComponent,
         DynamicFormComponent
+    ],
+    entryComponents: [
+        TextComponent
     ]
   })
   export class DynamicFormModule { }

@@ -36,6 +36,15 @@ describe('Fields Container', () => {
         expect(sut).toBeTruthy();
     });
 
+    it('should render a label', () => {
+        sut.fields = [{...new Field(), type: FieldType.text, label: 'Test Field'}];
+
+        fixture.detectChanges();
+
+        const element = fixture.debugElement.nativeElement;
+        expect(element.querySelector('label').innerText).toBe('Test Field');
+    });
+
     it('should render a text box', () => {
         sut.fields = [{...new Field(), type: FieldType.text}];
 

@@ -9,7 +9,7 @@ import { DynamicForm } from '../model/dynamicForm';
     template: `<input type="text" [formControl]="formControl" />`
 })
 
-export default class TextComponent extends InputBaseComponent  {
+export class TextComponent extends InputBaseComponent  {
     @Input() field: Field;
     protected formControl: FormControl = new FormControl(null, { updateOn: 'blur'});
 

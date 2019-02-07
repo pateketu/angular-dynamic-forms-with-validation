@@ -21,7 +21,7 @@ export class AppComponent implements OnInit {
         // setTimeout(() => {
         //   this.fields[0] = Object.assign({}, this.fields[0], {value: 'fubar111'});
         // }, 5000);
-    }, 1000);
+    });
   }
 
 }

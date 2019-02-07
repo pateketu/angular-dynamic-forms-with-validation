@@ -1,7 +1,7 @@
 import { ComponentFactoryResolver, ComponentRef, Directive, Input,
     OnInit, Type, ViewContainerRef, SimpleChange } from '@angular/core';
 import InputBaseComponent from '../inputs/input-base';
-import TextComponent from '../inputs/text';
+import {TextComponent} from '../inputs/text';
 import Field from '../model/field';
 
 const components: {[type: string]: Type<InputBaseComponent>} = {

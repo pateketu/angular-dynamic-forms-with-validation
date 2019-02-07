@@ -6,7 +6,7 @@ import Field from '../model/field';
     providers: [{provide: NG_VALIDATORS, useExisting: DynamicFieldValidatorDirective, multi: true}]
   })
 export class DynamicFieldValidatorDirective implements Validator {
-    @Input('dynamicFieldValidator') @Required field: Field;
+    @Input('dynamicFieldValidator') field: Field;
 
 
 
